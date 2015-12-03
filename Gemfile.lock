@@ -79,6 +79,7 @@ GEM
     nokogiri (1.6.7)
       mini_portile2 (~> 2.0.0.rc2)
     pg (0.17.1)
+    puma (2.15.3)
     pusher (0.15.1)
       httpclient (~> 2.5)
       multi_json (~> 1.0)
@@ -162,6 +163,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   pg (= 0.17.1)
+  puma
   pusher
   rails (= 4.2.4)
   rails_12factor (= 0.0.2)
