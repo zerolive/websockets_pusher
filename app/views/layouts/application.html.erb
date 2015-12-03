@@ -10,7 +10,7 @@
 	  var pusher = new Pusher('<%= Pusher.key %>'); // uses your API KEY
 	  var channel = pusher.subscribe('test_channel');
 	  channel.bind('reload', function(data) {
-	    window.location.reload();
+	    $('.dynamic').location.reload();
 	  });
 	</script>
 </head>
