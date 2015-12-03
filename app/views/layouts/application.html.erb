@@ -5,6 +5,14 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="http://js.pusher.com/3.0/pusher.min.js"></script>
+	<script type="text/javascript">
+	  var pusher = new Pusher('<%= Pusher.key %>'); // uses your API KEY
+	  var channel = pusher.subscribe('test_channel');
+	  channel.bind('reload', function(data) {
+	    window.location.reload();
+	  });
+	</script>
 </head>
 <body>
 
