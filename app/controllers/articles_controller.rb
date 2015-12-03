@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
 		@article = Article.new(article_params)
 
 		if @article.save
-			Pusher['test_channel'].trigger('reload', { event: "create"})
+			Pusher['test_channel'].trigger('reload', {})
 			redirect_to articles_path
 		else
 			render 'new'
@@ -19,7 +19,7 @@ class ArticlesController < ApplicationController
 	def destroy
 		@article = Article.find(params[:id])
 		@article.destroy
-		Pusher['test_channel'].trigger('reload', { event: "destroy"})
+		Pusher['test_channel'].trigger('reload', {})
 		redirect_to articles_path
 	end
 
